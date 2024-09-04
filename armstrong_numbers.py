@@ -1,11 +1,10 @@
+def is_armstrong_number(number):
+    number_str = str(number)
+    total = 0
+    digits = [int(digit) for digit in number_str]
+    length = len(digits)
 
-total = 0
-digits = [int(digit) for digit in number]
-length = len(digits)
+    for i in digits:
+        total += i**length
 
-for i in digits:
-    total += i**length
-
-
-    
-print(digits)
+    return total == number
